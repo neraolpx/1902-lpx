@@ -1,0 +1,120 @@
+@charset "utf-8";
+@import "footer";
+
+/*头部*/
+
+.header {
+    position: relative;
+    height: 120px;
+    vertical-align: middle;
+    z-index: 980;
+    width: 990px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 18px 40px 0 0;
+    float: left;
+}
+
+.logo a {
+    background: url(https://css.gomein.net.cn/images/regfront/register/loginlogo.png) no-repeat;
+    width: 300px;
+    height: 62px;
+    margin-top: 13px;
+    display: block;
+}
+
+
+/*意见*/
+
+.header .opion {
+    height: 16px;
+    color: #888;
+    position: absolute;
+    right: 5px;
+    top: 100px;
+    z-index: 990;
+}
+
+.opion:hover {
+    color: #e3101e;
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.opion i {
+    display: inline-block;
+    margin-right: 8px;
+    padding-bottom: 2px;
+    width: 15px;
+    height: 16px;
+    background: url(https://css.gomein.net.cn/images/loginfront/login/login-bg-common.png) 0 -257px no-repeat;
+    vertical-align: middle;
+}
+
+
+/*保护个人隐私*/
+
+.safe-Div {
+    background-color: #fff4e3;
+    border-top: 1px solid #fee6bc;
+}
+
+.safe-p {
+    width: 828px;
+    height: 29px;
+    padding-left: 10px;
+    margin: 0 auto;
+    background-color: #fff4e3;
+    color: #ff7f23;
+    font: 400 12px/29px "Microsoft Yahei";
+}
+
+.safe-p em {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin: 8px 5px 0 0;
+    background: url(https://css.gomein.net.cn/images/loginfront/login/login-bg-common.png) no-repeat -28px 0;
+    color: #ff7f23;
+    font: 400 12px/29px "Microsoft Yahei";
+}
+
+
+/*主体部分*/
+
+.main {
+    width: 100%;
+    height: 480px;
+    background: #ffffff;
+}
+
+.main-box {
+    background: url(https://gfs11.gomein.net.cn/T1SbZbBQdv1RCvBVdK.gif);
+    width: 1200px;
+    height: 480px;
+    margin: 0 auto;
+    background-position: top center;
+    position: relative;
+    z-index: 990;
+}
+
+
+/*登录盒子*/
+
+.login-box {
+    width: 350px;
+    float: right;
+    margin-top: 24px;
+    margin-right: 105px;
+    position: relative;
+    background: #fff;
+    overflow: visible;
+}
+
+.loginHead {
+    position: relative;
+    
+}
