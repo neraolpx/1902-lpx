@@ -116,5 +116,133 @@
 
 .loginHead {
     position: relative;
-    
+    height: 54px;
+}
+
+.loginHead div {
+    position: absolute;
+    border-bottom: 1px solid #f4f4f4;
+    font: 500 18px "Microsoft Yahei";
+    text-align: center;
+    color: #5e5e5e;
+    height: 54px;
+}
+
+.loginHead .loginTab-l {
+    left: 0;
+    width: 174px;
+}
+
+.loginHead .loginTab-r {
+    right: 0;
+    width: 175px;
+}
+
+.loginTab-l a {
+    border-right: 1px solid #f4f4f4;
+}
+
+.loginHead div a {
+    height: 18px;
+    position: absolute;
+    left: 0;
+    width: 99%;
+    text-decoration: none;
+    top: 16px;
+}
+
+.loginBody {
+    min-height: 241px;
+    padding: 25px 11px 0 19px;
+    text-align: center;
+}
+
+.loginBody img {
+    border: 1px solid #e6e6e6;
+}
+
+.loginBody p {
+    margin-top: 10px;
+}
+
+
+/*手机登录*/
+
+.loginBody-1 {
+    width: 300px;
+    position: relative;
+    padding: 5px 10px 0;
+}
+
+.loginBody-1 form .text {
+    position: relative;
+    padding: 8px 10px 7px;
+    width: 268px;
+    height: 25px;
+    border: 1px solid #CCC;
+    font-family: Arial, simsun;
+    outline: 0 none;
+    color: #333;
+    font-size: 14px;
+    line-height: 21px;
+    z-index: 2;
+    margin-top: 10px;
+}
+
+.loginBody-1 .remember {
+    float: left;
+    margin-right: 4px;
+    margin-top: 3px;
+}
+
+.lB-l {
+    float: left;
+    margin: 10px 0;
+}
+
+.lB-r {
+    float: right;
+    margin: 10px 0;
+}
+
+.loginBody-1 .button {
+    display: block;
+    width: 290px;
+    height: 42px;
+    background: #ff5757;
+    font: 500 18px/41px "Microsoft Yahei";
+    color: #fff;
+    text-align: center;
+    border: 0 none;
+    outline: 0;
+    word-spacing: 3px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+
+/*登录下部*/
+
+.loginFoot {
+    overflow: hidden;
+    clear: both;
+    background-color: #fcfcfc;
+    padding: 9px 20px;
+    color: #a5a5a5;
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.loginFoot dd {
+    width: 300px;
+}
+
+.loginFoot dd a {
+    float: left;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #5e5e5e;
+    padding: 0 8px;
+    margin: 6px 0;
+    border-right: 1px solid #e6e6e6;
 }

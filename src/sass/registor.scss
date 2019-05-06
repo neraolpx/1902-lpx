@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import "footer";
+
+/*头部*/
+
+.header {
+    position: relative;
+    height: 120px;
+    vertical-align: middle;
+    z-index: 980;
+    width: 990px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 18px 40px 0 0;
+    float: left;
+}
+
+.logo a {
+    background: url(https://misc.gomein.net.cn/images/regfront/register/registerlogo.png) no-repeat;
+    width: 300px;
+    height: 62px;
+    margin-top: 13px;
+    display: block;
+}
+
+
+/*注册盒子*/
+
+.main {
+    width: 990px;
+    margin: 0 auto;
+    height: 700px;
+}
+
+.mainbox {
+    border: 1px solid #E6E6E6;
+    padding-bottom: 21px;
+    margin-top: 68px;
+    height: 600px;
+    position: relative;
+    background: url(https://gfs11.gomein.net.cn/T1E1VjB7YT1RCvBVdK.png) no-repeat scroll 580px -60px;
+}
+
+.mainbox ul {
+    position: absolute;
+    top: -42px;
+    left: 149px;
+}
+
+.mainbox ul li {
+    float: left;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    font: bold 14px/41px "Microsoft YaHei";
+    margin-left: 2px;
+    border: 1px solid #e6e6e6;
+    border-bottom: 0 none;
+    cursor: pointer;
+}
+
+.go-login {
+    position: absolute;
+    top: -25px;
+    right: 20px;
+}

@@ -1,0 +1,40 @@
+@charset "utf-8";
+@import "footer";
+@import "header";
+
+/*头部*/
+
+.wbox {
+    margin: 0 auto;
+}
+
+.head {
+    position: relative;
+    height: 120px;
+    vertical-align: middle;
+    z-index: 980;
+    width: 990px;
+}
+
+.head #hLogo {
+    float: left;
+    margin: 32px 10px 0 0;
+}
+
+#hLogo a {
+    display: block;
+    width: 125px;
+    height: 56px;
+    background: url(https://css.gomein.net.cn/gmpro/1.0.0/public/1.0.0/css/i/logo.png) 0 0 no-repeat;
+    text-indent: -99px;
+    overflow: hidden;
+}
+
+.hCart {
+    font: 400 26px/120px 'microsoft yahei';
+    float: left;
+    padding: 0 40px 0 0;
+    background: url(https://css.gomein.net.cn/gmpro/2.0.0/cart/2.8.5/css/i/gwc.png) no-repeat 0 32px;
+    width: 135px;
+    text-indent: -999px;
+}
