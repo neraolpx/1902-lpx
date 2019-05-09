@@ -38,3 +38,191 @@
     width: 135px;
     text-indent: -999px;
 }
+
+
+/*返回登录*/
+
+.go-login {
+    width: 990px;
+    margin: 0 auto;
+    height: 53px;
+}
+
+.go-login .gl-box {
+    color: #333;
+    padding: 10px 0;
+    padding-bottom: 15px;
+    font-size: 12px;
+    float: left;
+}
+
+.gl-box a {
+    background: #e3101e;
+    color: #fff;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 3px;
+    line-height: 20px;
+}
+
+.gl-box a:hover {
+    background: #ff5757;
+    border-color: #ff5757;
+    color: #fff
+}
+
+
+/*购物车商品列表*/
+
+.main {
+    margin: 0 auto;
+    width: 990px;
+}
+
+
+/*表头部分*/
+
+.m-title {
+    margin: 0 auto;
+    height: 44px;
+    line-height: 44px;
+    background: #eee;
+    width: 988px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+}
+
+.m-title input {
+    margin-top: 16px;
+    float: left;
+    width: 14px;
+    height: 14px;
+}
+
+
+/*分格进行布局*/
+
+.col1 {
+    width: 91px;
+    float: left;
+}
+
+.col2 {
+    width: 389px;
+    float: left;
+}
+
+.col3 {
+    width: 155px;
+    float: left;
+}
+
+.col4 {
+    width: 80px;
+    float: left;
+}
+
+.col5 {
+    width: 154px;
+    float: left;
+    text-align: right;
+}
+
+.col6 {
+    width: 79px;
+    float: left;
+    text-align: right;
+}
+
+
+/*购物列表主体*/
+
+
+/*主体布局分类 三个input cho*/
+
+.m-listbox {
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.m-listbox .cho2 {
+    margin-top: 16px;
+    float: left;
+    width: 14px;
+    height: 14px;
+}
+
+.m-listbox .cho3 {
+    width: 50px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    left: 15px;
+}
+
+
+/*按钮加减商品数量*/
+
+.m-listbox .btn {
+    border: 1px solid #ccc;
+    text-decoration: none;
+    width: 13px;
+    text-align: center;
+    display: block;
+    color: #ccc;
+    position: absolute;
+    top: 0;
+    height: 22px;
+    font-weight: bold;
+}
+
+.g-down {
+    left: 0;
+}
+
+.g-up {
+    right: 0;
+}
+
+
+/*总价个*/
+
+.m-listbox .goodsnum {
+    position: relative;
+    height: 20px;
+}
+
+.m-listbox .del {
+    float: right;
+    margin-right: 5px;
+}
+
+
+/*结算*/
+
+.jiesuan {
+    width: 990px;
+    margin: 0 auto;
+    background: #f3f3f3;
+    height: 60px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.jiesuan a {
+    width: 136px;
+    background: #ff5757;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+}

@@ -49,19 +49,23 @@
 
 .b-choice li {
     width: 30px;
-    height: 13px;
+    height: 5px;
     display: inline-block;
     margin: 0 4px;
     cursor: pointer;
+    background: #000;
+    opacity: .3;
+}
+
+.b-choice .active {
+    background: red;
+    opacity: 1;
 }
 
 .b-choice li a {
     display: block;
     width: 30px;
     height: 5px;
-    background: #000;
-    opacity: .3;
-    margin-top: 4px;
 }
 
 

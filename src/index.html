@@ -384,9 +384,10 @@
     <!-- 轮播图 -->
     <!-- 轮播图 -->
     <div class="banner" style="height:450px">
-        <div>
+        <!-- 轮播图盒子 -->
+        <div class="b-include" style="height:450px;">
             <ul class="banner-box">
-                <li style="display:block; background:rgb(240, 217, 237);">
+                <li style=" background:rgb(240, 217, 237); opacity: 1;">
                     <a href="#">
                         <img class="lazyloading" src="https://gfs13.gomein.net.cn/T1cwYjB5A_1RCvBVdK.jpg" width="100" height="100">
                     </a>
@@ -394,7 +395,7 @@
                         <img src="https://gfs10.gomein.net.cn/T1k5xsBmxv1RCvBVdK.png">
                     </span>
                 </li>
-                <li style="background: rgb(171, 207, 255); display: none;">
+                <li style="background: rgb(171, 207, 255); opacity: 0; ">
                     <a href="#">
                         <img class="lazyloading" src="https://gfs11.gomein.net.cn/T1NQbbBsCv1RCvBVdK.jpg" width="100" height="100">
                     </a>
@@ -402,7 +403,7 @@
                         <img src="https://gfs10.gomein.net.cn/T1k5xsBmxv1RCvBVdK.png">
                     </span>
                 </li>
-                <li style="background: rgb(255, 198, 194); display: none;">
+                <li style="background: rgb(255, 198, 194); opacity: 0;">
                     <a href="#">
                         <img class="lazyloading" src="https://gfs13.gomein.net.cn/T1HhZbBKJ_1RCvBVdK.jpg" width="100" height="100">
                     </a>
@@ -410,7 +411,7 @@
                         <img src="https://gfs10.gomein.net.cn/T1k5xsBmxv1RCvBVdK.png">
                     </span>
                 </li>
-                <li style="background: rgb(217, 255, 242); display:none;">
+                <li style="background: rgb(217, 255, 242); opacity: 0;">
                     <a href="#">
                         <img class="lazyloading" src="https://gfs13.gomein.net.cn/T1TyCsBmD_1RCvBVdK.jpg" width="100" height="100">
                     </a>
@@ -418,7 +419,7 @@
                         <img src="https://gfs10.gomein.net.cn/T1k5xsBmxv1RCvBVdK.png">
                     </span>
                 </li>
-                <li style="background: rgb(143, 180, 251); display: none;">
+                <li style="background: rgb(143, 180, 251); opacity: 0;">
                     <a href="#">
                         <img class="lazyloading" src="https://gfs11.gomein.net.cn/T1gG__BsZ_1RCvBVdK.jpg" width="100" height="100">
                     </a>
@@ -426,7 +427,7 @@
                         <img src="https://gfs10.gomein.net.cn/T1k5xsBmxv1RCvBVdK.png">
                     </span>
                 </li>
-                <li style="background: rgb(254, 203, 32); display: none;">
+                <li style="background: rgb(254, 203, 32); opacity: 0;">
                     <a href="#">
                         <img class="lazyloading" src="http://gfs11.gomein.net.cn/T1vY_QB4__1RCvBVdK.jpg" width="100" height="100">
                     </a>
@@ -434,7 +435,7 @@
                         <img src="https://gfs10.gomein.net.cn/T1k5xsBmxv1RCvBVdK.png">
                     </span>
                 </li>
-                <li style="background: rgb(65, 127, 250); display: none;">
+                <li style="background: rgb(65, 127, 250); opacity: 0;">
                     <a href="#">
                         <img class="lazyloading" src="http://gfs13.gomein.net.cn/T1sOh_BXV_1RCvBVdK.jpg" width="100" height="100">
                     </a>
@@ -442,7 +443,7 @@
                         <img src="https://gfs10.gomein.net.cn/T1k5xsBmxv1RCvBVdK.png">
                     </span>
                 </li>
-                <li style="background: rgb(255, 199, 0); display: none;">
+                <li style="background: rgb(255, 199, 0); opacity: 0;">
                     <a href="#">
                         <img class="lazyloading" src="http://gfs10.gomein.net.cn/T1gFxsBmb_1RCvBVdK.jpg" width="100" height="100">
                     </a>
@@ -452,30 +453,14 @@
                 </li>
             </ul>
             <ol class="b-choice">
-                <li class="">
-                    <a></a>
-                </li>
-                <li class="">
-                    <a></a>
-                </li>
-                <li class="">
-                    <a></a>
-                </li>
-                <li class="">
-                    <a></a>
-                </li>
-                <li class="">
-                    <a></a>
-                </li>
-                <li class="">
-                    <a></a>
-                </li>
-                <li class="">
-                    <a></a>
-                </li>
-                <li class="">
-                    <a></a>
-                </li>
+                <li class="active"></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
             </ol>
             <!-- 按钮  按钮 按钮  按钮 按钮  按钮 按钮  按钮 -->
             <div class="b-btn-box">
@@ -731,14 +716,281 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- 数据库渲染部分 与tab切换关联内容 -->
+                    <div id="main_warp">
+                        <div class="TAB1 m-main">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                        <div class="TAB2 m-main" style="display:none">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                        <div class="TAB3 m-main" style="display:none">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                        <div class="TAB4 m-main" style="display:none">
+                            <ul class="main-inner">
+
+                        </div>
+                        <div class="TAB5 m-main" style="display:none">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- 2F电脑数码 -->
-    <div></div>
+    <div class="wbox main-floor">
+        <div class="m-floor">
+            <div class="mp-f">
+                <div class="m-top">
+                    <div class="m-title">
+                        <h2>2F&nbsp;电脑数码</h2>
+                    </div>
+                    <!-- tab切换 -->
+                    <ul class="tab">
+                        <li class=""><a style="background: none;" href="#">精选热卖</a></li>
+                        <li class=""><a href="#" style="background: rgb(113, 158, 247);">时尚新品</a></li>
+                        <li class=""><a href="#" style="background: none;">畅享低价</a></li>
+                        <li class=""><a href="#" style="background: none;">精选店铺</a></li>
+                        <li class=""><a href="#" style="background: none;">精选单品</a></li>
+                    </ul>
+                </div>
+                <!-- 内容 -->
+                <div class="mpf-main">
+                    <div class="mpf-ml">
+                        <a href="#" class="mpf-pic">
+                            <img src="https://gfs10.gomein.net.cn/T17LZjBQK_1RCvBVdK.png" alt="">
+                        </a>
+                        <div class="channel">
+                            <ul>
+                                <li>
+                                    <a href="#">手机</a>
+                                    <span>/</span>
+                                    <a href="#">充值</a>
+                                    <span>/</span>
+                                    <a href="#">租租</a>
+                                    <span>/</span>
+                                    <a href="#">领券</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="m-keywords">
+                            <ul class="u1">
+                                <li>
+                                    <a href="#">荣耀手机</a>
+                                </li>
+                                <li>
+                                    <a href="#">三星手机</a>
+                                </li>
+                                <li>
+                                    <a href="#">华为手机</a>
+                                </li>
+                                <li>
+                                    <a href="#">热销推荐</a>
+                                </li>
+                                <li>
+                                    <a href="#">以旧换新</a>
+                                </li>
+                            </ul>
+                            <ul class="u2">
+                                <li>
+                                    <a href="#">潮3C</a>
+                                </li>
+                                <li>
+                                    <a href="#">魅族</a>
+                                </li>
+                                <li>
+                                    <a href="#">配件</a>
+                                </li>
+                                <li>
+                                    <a href="#">全面屏</a>
+                                </li>
+                                <li>
+                                    <a href="#">保护套</a>
+                                </li>
+                            </ul>
+                            <ul class="u3">
+                                <li>
+                                    <a href="#">国美租租</a>
+                                </li>
+                                <li>
+                                    <a href="#">小米手机</a>
+                                </li>
+                                <li>
+                                    <a href="#">iPhone XR</a>
+                                </li>
+                                <li>
+                                    <a href="#">OPPO手机</a>
+                                </li>
+                                <li>
+                                    <a href="#">淘实惠</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 数据库渲染部分 -->
+                    <div id="main_warp">
+                        <div class="TAB1 m-main">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                        <div class="TAB2 m-main" style="display:none">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                        <div class="TAB3 m-main" style="display:none">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                        <div class="TAB4 m-main" style="display:none">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                        <div class="TAB5 m-main" style="display:none">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 3F家用电器 -->
-    <div></div>
+    <div class="wbox main-floor">
+        <div class="m-floor">
+            <div class="mp-f">
+                <div class="m-top">
+                    <div class="m-title">
+                        <h2>3F&nbsp;家用电器</h2>
+                    </div>
+                    <!-- tab切换 -->
+                    <ul class="tab">
+                        <li class=""><a style="background: none;" href="#">精选热卖</a></li>
+                        <li class=""><a href="#" style="background: rgb(113, 158, 247);">时尚新品</a></li>
+                        <li class=""><a href="#" style="background: none;">畅享低价</a></li>
+                        <li class=""><a href="#" style="background: none;">精选店铺</a></li>
+                        <li class=""><a href="#" style="background: none;">精选单品</a></li>
+                    </ul>
+                </div>
+                <!-- 内容 -->
+                <div class="mpf-main">
+                    <div class="mpf-ml">
+                        <a href="#" class="mpf-pic">
+                            <img src="https://gfs12.gomein.net.cn/T1LF_sBTKv1RCvBVdK.jpg" alt="">
+                        </a>
+                        <div class="channel">
+                            <ul>
+                                <li>
+                                    <a href="#">手机</a>
+                                    <span>/</span>
+                                    <a href="#">充值</a>
+                                    <span>/</span>
+                                    <a href="#">租租</a>
+                                    <span>/</span>
+                                    <a href="#">领券</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="m-keywords">
+                            <ul class="u1">
+                                <li>
+                                    <a href="#">荣耀手机</a>
+                                </li>
+                                <li>
+                                    <a href="#">三星手机</a>
+                                </li>
+                                <li>
+                                    <a href="#">华为手机</a>
+                                </li>
+                                <li>
+                                    <a href="#">热销推荐</a>
+                                </li>
+                                <li>
+                                    <a href="#">以旧换新</a>
+                                </li>
+                            </ul>
+                            <ul class="u2">
+                                <li>
+                                    <a href="#">潮3C</a>
+                                </li>
+                                <li>
+                                    <a href="#">魅族</a>
+                                </li>
+                                <li>
+                                    <a href="#">配件</a>
+                                </li>
+                                <li>
+                                    <a href="#">全面屏</a>
+                                </li>
+                                <li>
+                                    <a href="#">保护套</a>
+                                </li>
+                            </ul>
+                            <ul class="u3">
+                                <li>
+                                    <a href="#">国美租租</a>
+                                </li>
+                                <li>
+                                    <a href="#">小米手机</a>
+                                </li>
+                                <li>
+                                    <a href="#">iPhone XR</a>
+                                </li>
+                                <li>
+                                    <a href="#">OPPO手机</a>
+                                </li>
+                                <li>
+                                    <a href="#">淘实惠</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 数据库渲染部分 -->
+                    <div id="main_warp">
+                        <div class="TAB1 m-main">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                        <div class="TAB2 m-main" style="display:none">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                        <div class="TAB3 m-main" style="display:none">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                        <div class="TAB4 m-main" style="display:none">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                        <div class="TAB5 m-main" style="display:none">
+                            <ul class="main-inner">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 4F厨房卫浴 -->
     <div></div>
     <!-- 5F国美超市 -->
@@ -948,6 +1200,7 @@
             <li class="handler"><b class="fl-dot"></b><a href="#"><span>6F</span><p>家居家装</p></a></li>
             <li class="handler"><b class="fl-dot"></b><a href="#"><span>7F</span><p>汽车用品</p></a></li>
         </ul>
+        <!-- 回到顶部 回到底部 -->
         <ul class="fl-goto">
             <li class="flTop">
                 <a href="#" class=""></a>
@@ -957,3 +1210,8 @@
             </li>
         </ul>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="script/js/index.js"></script>
+</body>
+
+</html>

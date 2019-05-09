@@ -1152,210 +1152,232 @@
   display: block;
 }
 
-/*头部*/
-.wbox {
-  margin: 0 auto;
-}
-
-.head {
+/*放大镜*/
+.wrap {
+  width: 1000px;
+  height: 500px;
+  margin: 30px 0;
+  margin-left: 115px;
   position: relative;
-  height: 120px;
-  vertical-align: middle;
-  z-index: 980;
-  width: 990px;
 }
 
-.head #hLogo {
+/*小图 小芳*/
+#spic {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #000;
   float: left;
-  margin: 32px 10px 0 0;
+  position: relative;
 }
 
-#hLogo a {
-  display: block;
-  width: 125px;
-  height: 56px;
-  background: url(https://css.gomein.net.cn/gmpro/1.0.0/public/1.0.0/css/i/logo.png) 0 0 no-repeat;
-  text-indent: -99px;
-  overflow: hidden;
+#spic img {
+  width: 400px;
+  height: 400px;
 }
 
-.hCart {
-  font: 400 26px/120px 'microsoft yahei';
-  float: left;
-  padding: 0 40px 0 0;
-  background: url(https://css.gomein.net.cn/gmpro/2.0.0/cart/2.8.5/css/i/gwc.png) no-repeat 0 32px;
-  width: 135px;
-  text-indent: -999px;
-}
-
-/*返回登录*/
-.go-login {
-  width: 990px;
-  margin: 0 auto;
-  height: 53px;
-}
-
-.go-login .gl-box {
-  color: #333;
-  padding: 10px 0;
-  padding-bottom: 15px;
-  font-size: 12px;
-  float: left;
-}
-
-.gl-box a {
-  background: #e3101e;
-  color: #fff;
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 3px;
-  line-height: 20px;
-}
-
-.gl-box a:hover {
-  background: #ff5757;
-  border-color: #ff5757;
-  color: #fff;
-}
-
-/*购物车商品列表*/
-.main {
-  margin: 0 auto;
-  width: 990px;
-}
-
-/*表头部分*/
-.m-title {
-  margin: 0 auto;
-  height: 44px;
-  line-height: 44px;
-  background: #eee;
-  width: 988px;
-  border: 1px solid #e6e6e6;
-  border-radius: 3px;
-}
-
-.m-title input {
-  margin-top: 16px;
-  float: left;
-  width: 14px;
-  height: 14px;
-}
-
-/*分格进行布局*/
-.col1 {
-  width: 91px;
-  float: left;
-}
-
-.col2 {
-  width: 389px;
-  float: left;
-}
-
-.col3 {
-  width: 155px;
-  float: left;
-}
-
-.col4 {
-  width: 80px;
-  float: left;
-}
-
-.col5 {
-  width: 154px;
-  float: left;
-  text-align: right;
-}
-
-.col6 {
-  width: 79px;
-  float: left;
-  text-align: right;
-}
-
-/*购物列表主体*/
-/*主体布局分类 三个input cho*/
-.m-listbox {
-  border: 1px solid #e6e6e6;
-  overflow: hidden;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.m-listbox .cho2 {
-  margin-top: 16px;
-  float: left;
-  width: 14px;
-  height: 14px;
-}
-
-.m-listbox .cho3 {
+#sf {
   width: 50px;
-  height: 20px;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  text-align: center;
+  height: 50px;
+  background: orange;
+  opacity: 0.3;
   position: absolute;
-  left: 15px;
+  left: 0px;
+  top: 0px;
+  visibility: hidden;
+  cursor: move;
 }
 
-/*按钮加减商品数量*/
-.m-listbox .btn {
+/*大图 大方*/
+#bf {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #000;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  left: 10px;
+  z-index: 99;
+  visibility: hidden;
+}
+
+#bf img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+/*下方图片列表 按钮切换*/
+#ulist {
+  position: absolute;
+  left: 0px;
+  bottom: 15px;
+  width: 402px;
+  height: 56px;
+  overflow: hidden;
+}
+
+#ulist a {
+  float: left;
+  width: 10px;
+  height: 54px;
   border: 1px solid #ccc;
   text-decoration: none;
-  width: 13px;
+  line-height: 56px;
   text-align: center;
-  display: block;
-  color: #ccc;
+  background: #fff;
+}
+
+#list {
+  float: left;
+  margin-left: 18px;
+  width: 372px;
+  position: relative;
+}
+
+#list ul {
+  list-style: none;
+  float: left;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#list ul li {
+  float: left;
+  width: 56px;
+  height: 56px;
+  padding-right: 6px;
+  cursor: pointer;
+}
+
+ul li img {
+  width: 52px;
+  height: 52px;
+  border: 1px solid #ccc;
+}
+
+#right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: #333;
+}
+
+#left {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  color: #fff;
+}
+
+/*价格 添加购物车*/
+#g-carbox {
+  width: 500px;
   position: absolute;
   top: 0;
-  height: 22px;
-  font-weight: bold;
-}
-
-.g-down {
-  left: 0;
-}
-
-.g-up {
   right: 0;
 }
 
-/*总价个*/
-.m-listbox .goodsnum {
-  position: relative;
-  height: 20px;
+/*名称价格*/
+.cg-title {
+  padding-top: 5px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #5e5e5e;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.m-listbox .del {
-  float: right;
-  margin-right: 5px;
-}
-
-/*结算*/
-.jiesuan {
-  width: 990px;
-  margin: 0 auto;
-  background: #f3f3f3;
-  height: 60px;
-  margin-top: 20px;
-  position: relative;
-}
-
-.jiesuan a {
-  width: 136px;
-  background: #ff5757;
-  display: block;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
+.cg-price {
+  padding: 22px 12px 21px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background-color: #f95c5c;
+  font: 24px SimSun;
   color: #fff;
-  font-size: 16px;
-  position: absolute;
-  right: 0;
 }
 
-/*# sourceMappingURL=cart.css.map */
+.cg-price span {
+  font: 24px SimSun;
+}
+
+/*添加购物车 数量加减*/
+.cg-gocar {
+  min-height: 42px;
+  margin-bottom: 10px;
+  margin-top: 34px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.cg-gocar .cg-change {
+  position: relative;
+  float: left;
+  width: 46px;
+  height: 38px;
+  border: 1px solid #ccc;
+}
+
+.cg-change input {
+  width: 32px;
+  border: none;
+  display: block;
+  line-height: 38px;
+  text-align: center;
+  float: left;
+  height: 36px;
+  color: #5e5e5e;
+}
+
+.cg-change a {
+  display: block;
+  float: left;
+  width: 13px;
+  height: 18px;
+  border-left: 1px solid #ccc;
+  line-height: 18px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  font: 12px/150% tahoma, arial, Microsoft YaHei, Hiragino Sans GB, "\u5b8b\u4f53", sans-serif;
+  color: #5e5e5e;
+  background: #f8f8f8;
+}
+
+/*加入购物车按钮*/
+#addcar {
+  display: block;
+  width: 140px;
+  float: left;
+  margin-left: 10px;
+  height: 24px;
+  background-color: #e3101e;
+  padding: 8px 25px;
+  text-align: center;
+  font: 18px/22px 'Microsoft Yahei';
+  color: #fff;
+}
+
+/*手机扫码下单*/
+.p-logo {
+  display: block;
+  width: 98px;
+  margin-left: 10px;
+  height: 38px;
+  color: #5e5e5e;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  position: relative;
+  float: left;
+}
+
+.p-logo i {
+  padding: 5px 14px;
+  margin-right: 8px;
+  margin-left: 6px;
+  background: url(https://css.gomein.net.cn/gmpro/2.0.0/item/1.12.25/css/i/bg-sprite.png?__sprite) no-repeat;
+  background-position: 0 -2812px;
+  line-height: 38px;
+}
+
+/*# sourceMappingURL=details.css.map */

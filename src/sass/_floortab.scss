@@ -1,0 +1,223 @@
+@charset "utf-8";
+.main-floor {
+    margin-top: 30px!important;
+}
+
+.m-floor {
+    position: relative;
+    background: url(../img/loading.gif) 50% 50% no-repeat;
+}
+
+.m-floor .m-top {
+    height: 38px;
+    padding-top: 32px;
+    border-bottom: 1px solid #719ef7;
+}
+
+.m-floor .m-title {
+    width: 210px;
+    height: 38px;
+    overflow: hidden;
+    float: left;
+    line-height: 38px;
+    font-size: 12px;
+    font-family: Arial, "Microsoft Yahei";
+}
+
+.m-floor .m-title h2 {
+    font-weight: 500;
+}
+
+
+/*tab 切换*/
+
+.m-floor .tab {
+    float: right;
+    margin-top: 8px;
+    max-width: 790px;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.m-floor .tab li {
+    float: left;
+}
+
+.tab li a {
+    font-size: 14px;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
+    color: #5e5e5e;
+    display: inline-block;
+}
+
+
+/*楼层左边盒子*/
+
+.m-floor .mpf-main {
+    height: 470px;
+}
+
+.m-floor .mpf-ml {
+    height: 470px;
+    width: 210px;
+    float: left;
+    position: relative;
+}
+
+.m-floor .mpf-ml .mpf-pic {
+    display: block;
+    background: #fff;
+}
+
+.m-floor .mpf-ml .mpf-pic img {
+    margin-left: -10px;
+    display: block;
+    width: 220px;
+    height: 278px;
+}
+
+.m-floor .channel {
+    max-height: 98px;
+    position: absolute;
+    left: -10px;
+    bottom: 160px;
+    background: #6294f6;
+    overflow: hidden;
+    width: 210px;
+    margin-left: 10px;
+}
+
+.channel ul {
+    width: 180px;
+    margin-left: 15px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.channel li {
+    height: 32px;
+    line-height: 32px;
+}
+
+.channel span {
+    font-size: 14px;
+    color: #f0f0f0;
+    float: left;
+    padding: 0 5px;
+}
+
+.channel a {
+    font-size: 14px;
+    color: #f0f0f0;
+    float: left;
+    height: 23px;
+}
+
+.m-floor .m-keywords {
+    height: 160px;
+    width: 210px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #719ef7;
+}
+
+.m-floor .m-keywords .u1 {
+    height: 137px;
+    width: 50px;
+    float: left;
+    overflow: hidden;
+    margin: 8px 0 15px 15px;
+}
+
+.m-floor .m-keywords .u2 {
+    height: 137px;
+    width: 37px;
+    float: left;
+    overflow: hidden;
+    margin: 8px 0 15px 10px;
+}
+
+.m-floor .m-keywords .u3 {
+    width: 73px;
+    margin: 8px 15px 15px 10px;
+    height: 137px;
+    float: left;
+    overflow: hidden;
+}
+
+.m-floor .m-keywords li {
+    height: 28px;
+    line-height: 28px;
+}
+
+.m-floor .m-keywords li a {
+    display: inline-block;
+    color: #f0f0f0;
+    height: 20px;
+}
+
+
+/*数据库渲染部分*/
+
+#main_warp {
+    width: 990px;
+    height: 470px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.m-main {
+    width: 990px;
+    height: 470px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+}
+
+.m-main .main-inner li {
+    width: 198px;
+    height: 235px;
+    float: left;
+    overflow: hidden;
+}
+
+.main-inner li a {
+    width: 197px;
+    height: 234px;
+    display: block;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+
+.main-inner li img {
+    display: block;
+    width: 130px;
+    height: 130px;
+    margin: 20px 0 15px 34px;
+}
+
+.main-inner li p {
+    width: 157px;
+    height: 36px;
+    margin-left: 20px;
+    overflow: hidden;
+    line-height: 18px;
+    font-size: 12px;
+    color: #5e5e5e;
+}
+
+.main-inner li span {
+    height: 20px;
+    line-height: 26px;
+    color: #ff0027;
+    font-size: 14px;
+    margin-left: 20px;
+}

@@ -66,3 +66,52 @@
     top: -25px;
     right: 20px;
 }
+
+
+/*注册表单样式*/
+
+.bd {
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.bd div {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.bd div span {
+    float: left;
+    width: 60px;
+    line-height: 36px;
+}
+
+.bd .bd-text {
+    width: 288px;
+    height: 36px;
+    padding: 0 4px;
+    border: 1px solid #ccc;
+    font: normal 14px/36px Arial, "Simsun";
+    color: #a5a5a5;
+    vertical-align: middle;
+    position: relative;
+    float: left;
+    margin-left: 10px;
+}
+
+.bd .bd-btn {
+    color: #E6E6E6;
+    background-color: #ff5757;
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font: 16px/40px "Microsoft YaHei";
+    height: 40px;
+    text-align: center;
+    width: 298px;
+    margin-top: 20px;
+    margin-left: 70px;
+}
