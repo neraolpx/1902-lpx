@@ -19,14 +19,14 @@
                 },
                 dataType: 'json',
                 success(data) {
-                    console.log(data);
+
                     $this.spic.attr('src', data.url);
                     $this.bpic.attr('src', data.url);
                     $this.title.html(data.title);
                     $this.price.html(data.price);
                     // 将urls数据转成数组
                     let picarr = data.urls.split(',');
-                    console.log(picarr);
+
                     let $datastr = "";
                     // 遍历拼接进列表
                     $.each(picarr, function(index, value) {
@@ -137,9 +137,7 @@
                 let $liwidth = $li.outerWidth(true);
                 if ($li.length > this.num) {
                     this.num++;
-
-                    if ($li.length == this.num) { //此时图片列表运动到最后一个
-                        this.right.css('color', '#fff')
+                    if ($li.length == this.num) { //此时图片列表运动到最后一个 
                     }
                     this.list.animate({
                         left: -(this.num - 6) * $liwidth
@@ -152,7 +150,6 @@
             let $liwidth = $li.outerWidth(true);
             if (this.num > 6) {
                 this.num--;
-
                 this.list.animate({
                     left: -(this.num - 6) * $liwidth
                 })
@@ -160,4 +157,113 @@
         }
     }
     new glass().init();
+})();
+
+// 添加进购物车
+;
+(function() {
+    class gotocart {
+        constructor() {
+            this.addbtn = $('#addcar');
+            // 获取当前的图片sid
+            this.id = location.search.substring(1).split('=')[1];
+            this.count = $('#count'); //获取输入框
+            this.arrsid = [];
+            this.arrnum = [];
+        }
+        init() {
+                let $this = this;
+                let $sid = this.id;
+                this.addbtn.on('click', function() {
+                    // 获取当前商品sid
+                    $this.cookietogo();
+                    // 判断商品cookie是否存在
+                    if ($.inArray($sid, $this.arrsid) != -1) { //商品存在 返回索引 只添加数量
+                        //取出当前的数量 再加上输入的数量 在存入cookie
+                        let num = parseInt($this.arrnum[$.inArray($sid, $this.arrsid)]) + parseInt($this.count.val());
+                        $this.arrnum[$.inArray($sid, $this.arrsid)] = num;
+                        $this.addcookie('cookienum', $this.arrnum.toString(), 7);
+                    } else { //商品不存在 添加sid和数量
+                        $this.arrsid.push($sid);
+                        $this.addcookie('cookiesid', $this.arrsid.toString(), 7); //sid
+                        $this.arrnum.push($this.count.val());
+                        $this.addcookie('cookienum', $this.arrnum.toString(), 7); //数量
+                    }
+                })
+            }
+            // 获取cooike 判断是否是第一次存储
+        cookietogo() {
+                if (this.getcookie('cookiesid') && this.getcookie(' cookienum')) { //判断商品是否第一次存储  这里cookienum 浏览器中多了一个空格
+                    this.arrsid = this.getcookie('cookiesid').split(',');
+                    this.arrnum = this.getcookie(' cookienum').split(',');
+                }
+                // if (this.getcookie(' cookienum')) {
+                //     alert(1)
+                // }
+            }
+            // 添加cookie
+        addcookie(key, value, days) {
+                let $day = new Date();
+                $day.setDate($day.getDate() + days);
+                var a = document.cookie = key + '=' + value + ';expires=' + $day;
+            }
+            // 获取cookie
+        getcookie(key) {
+                let $arr = document.cookie.split(';');
+                for (let i = 0; i < $arr.length; i++) {
+                    var na = $arr[i].split('=');
+                    if (na[0] == key) {
+                        return na[1];
+                    }
+                }
+            }
+            // 删除cookie
+        delcookie(key) {
+            this.addcookie(key, '', -1);
+        }
+    }
+    new gotocart().init();
+})();
+
+//按钮点击事件加减要添加购物车的商品数量
+
+;
+(function() {
+    class btn {
+        constructor() {
+            this.up = $('#gn-push');
+            this.down = $('#gn-del');
+            this.count = $('#count');
+        }
+        init() {
+                let $this = this;
+                //点击加商品数量
+                //点击增加添加的数量
+                this.up.on('click', function() {
+                    $this.upclick();
+                });
+                //点击减少加的数量
+                this.down.on('click', function() {
+                    $this.downclick();
+                });
+            }
+            //加数量
+        upclick() {
+            let num = this.count.val();
+            num++;
+            if (num > 99) {
+                num = 99;
+            }
+            this.count.val(num);
+        }
+        downclick() {
+            let num = this.count.val();
+            num--;
+            if (num < 0) {
+                num = 0;
+            }
+            this.count.val(num);
+        }
+    }
+    new btn().init();
 })()
