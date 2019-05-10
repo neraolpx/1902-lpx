@@ -90,7 +90,7 @@
     <!-- 内容 -->
     <div class="main">
         <div class="m-title">
-            <input type="checkbox" class="cho1">
+            <input type="checkbox" class="cho1 achoice">
             <p class="col1">全选</p>
             <p class="col2">商品信息</p>
             <p class="col3">单价</p>
@@ -100,11 +100,11 @@
         </div>
         <!-- 商品列表 -->
         <div class="m-listbox">
-            <ul>
-                <li>
+            <div id="goodslist">
+                <div class="mgoods" style="display:none">
                     <input type="checkbox" class="cho2">
                     <div class="cl-pic col1">
-                        <a href="#">
+                        <a href="javascript:;">
                             <img src="https://gfs17.gomein.net.cn/T1mhKbBvC_1RCvBVdK_80.jpg" alt="">
                         </a>
                     </div>
@@ -113,25 +113,34 @@
                             <p>美的（Midea）535升L美的双开门冰箱风冷无霜家用美的对开门电冰箱</p>
                         </div>
                         <div class="price col3">
-                            ¥&nbsp;2899.00
+                            ¥&nbsp;
+                            <span>2899.00</span>
                         </div>
                         <div class="goodsnum col4">
-                            <a href="#" class="g-dowm btn">-</a>
-                            <a href="#" class="g-up btn">+</a>
+                            <a href="javascript:;" class="g-dowm btn">-</a>
+                            <a href="javascript:;" class="g-up btn">+</a>
                             <input type="text" class="cho3 g-num" value="1">
                         </div>
                         <div class="allprice col5">
-                            ¥&nbsp;2899.00
+                            ¥&nbsp;
+                            <span>2899.00</span>
                         </div>
-                        <button class="del">删除</button>
+                        <a class="del">删除</a>
                     </div>
-                </li>
-            </ul>
+                </div>
+            </div>
 
         </div>
         <div class="jiesuan">
             <!-- <input type="checkbox" class="cho2"> -->
-            <a href="#">去结算</a>
+            <input type="checkbox" class="achoice">
+            <p class="allc">全选</p>
+            <p class="js_del">删除选中的商品</p>
+            <p class="js_add">添加到我的关注</p>
+            <p class="js_ced">已选择 <em>1</em> 件商品</p>
+            <p class="js_price">总价（不含运费）：<span>200</span></p>
+            <a href="javascript:;"></a>
+            <a href="javascript:;" class="jsbox">去结算</a>
         </div>
     </div>
     <!-- 底部 -->
@@ -219,6 +228,8 @@
             <em class="change-is-better "></em>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="script/js/cart.js"></script>
 </body>
 
 </html>

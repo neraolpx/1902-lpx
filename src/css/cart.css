@@ -1276,12 +1276,26 @@
 }
 
 /*购物列表主体*/
+#goodslist {
+  overflow: hidden;
+}
+
+.mgoods {
+  overflow: hidden;
+  margin-top: 10px;
+}
+
 /*主体布局分类 三个input cho*/
 .m-listbox {
   border: 1px solid #e6e6e6;
   overflow: hidden;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.cl-pic img {
+  width: 80px;
+  height: 80px;
 }
 
 .m-listbox .cho2 {
@@ -1332,7 +1346,7 @@
 
 .m-listbox .del {
   float: right;
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
 /*结算*/
@@ -1345,7 +1359,50 @@
   position: relative;
 }
 
-.jiesuan a {
+.jiesuan input {
+  margin-top: 22px;
+  float: left;
+  width: 14px;
+  height: 14px;
+}
+
+.jiesuan em {
+  color: #e4393c;
+  font-family: verdana;
+  font-weight: 700;
+  margin: 0 3px;
+}
+
+.jiesuan span {
+  font-size: 18px;
+  color: #e4393c;
+  font-weight: 700;
+}
+
+.jiesuan p {
+  float: left;
+  line-height: 60px;
+}
+
+/*宽度最下面*/
+.jiesuan .js_del,
+.js_ced,
+.js_add {
+  width: 105px;
+  margin-left: 10px;
+}
+
+.js_del,
+.js_add {
+  cursor: pointer;
+}
+
+.js_price {
+  width: 300px;
+  margin-left: 20px;
+}
+
+.jiesuan .jsbox {
   width: 136px;
   background: #ff5757;
   display: block;
@@ -1355,6 +1412,7 @@
   color: #fff;
   font-size: 16px;
   position: absolute;
+  top: 0;
   right: 0;
 }
 
