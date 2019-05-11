@@ -197,9 +197,6 @@
                     this.arrsid = this.getcookie('cookiesid').split(',');
                     this.arrnum = this.getcookie(' cookienum').split(',');
                 }
-                // if (this.getcookie(' cookienum')) {
-                //     alert(1)
-                // }
             }
             // 添加cookie
         addcookie(key, value, days) {

@@ -27,33 +27,32 @@
             <p class="go-login">我已经注册，现在就
                 <a href="#">登录</a>
             </p>
-            <form action="" class="bd">
+            <form action="http://10.31.163.58/2jieduan/projectname/php/user/reg.php" method="POST" id="form">
                 <!-- 用户名 -->
                 <div>
-                    <span>用户名</span><input type="text" class="bd-text" placeholder="请输入用户名">
+                    <label class="fwidth" for="username">用户名：</label>
+                    <input type="text" class="bd-text" id="username" name="username" <label id="username-error" class="error" for="username">(必填，3-15字符长度，支持汉字、字母、数字及_)</label>
                 </div>
                 <!-- 设置密码 -->
                 <div>
-                    <span>设置密码</span><input type="text" class="bd-text" placeholder="请输入设置的密码">
+                    <label class="fwidth" for="password">密码：</label>
+                    <input type="password" class="bd-text" id="password" name="password">
+                    <label id="password-error" class="error" for="password">(必填，不得少于6位)</label>
                 </div>
                 <!-- 确认密码 -->
                 <div>
-                    <span>确认密码</span><input type="text" class="bd-text" placeholder="请确认密码">
+                    <label class="fwidth" for="repass">密码重复：</label>
+                    <input type="password" class="bd-text" id="repass" name="repass">
+                    <label id="repass-error" class="error" for="repass">(必填，不得少于6位)</label>
                 </div>
-                <!-- 手机号码 -->
+                <!-- 邮箱 -->
                 <div>
-                    <span>手机号码</span><input type="text" class="bd-text" placeholder="请输入手机号码">
-                </div>
-                <!-- 短信验证码 -->
-                <div>
-                    <span>短信验证码</span><input type="text" class="bd-text" placeholder="请输入验证码">
-                </div>
-                <!-- 推荐码 -->
-                <div>
-                    <span>推荐码</span><input type="text" class="bd-text" placeholder="请输入推荐码">
+                    <label class="fwidth" for="email">邮箱：</label>
+                    <input type="text" class="bd-text" id="email" name="email">
+                    <label id="email-error" class="error" for="email">(必填)</label>
                 </div>
                 <!-- 注册按钮 -->
-                <input type="button" value="注册" class="bd-btn">
+                <input type="submit" value="注册" name="submit" class="bd-btn">
             </form>
         </div>
     </div>
@@ -142,6 +141,58 @@
             <em class="change-is-better "></em>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="script/js/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        //表单验证-用户名
+        $(function() {
+            console.log(1)
+            $('#form').validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 2,
+                        maxlength: 10,
+                        remote: { //将前端的name给后端
+                            url: "http://10.31.163.58/2jieduan/projectname/php/user/reg.php", //后台处理程序
+                            type: "post" //数据发送方式
+                        }
+                    },
+                    password: {
+                        required: true,
+                        minlength: 6
+                    },
+                    repass: {
+                        required: true,
+                        equalTo: '#password'
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                },
+                messages: {
+                    username: {
+                        required: '用户名不能为空',
+                        minlength: '用户名不能小于2',
+                        maxlength: '用户名不能大于10',
+                        remote: '用户名已存在'
+                    },
+                    password: {
+                        required: '密码不能为空'
+                    },
+                    repass: {
+                        required: '密码重复不能为空'
+                    },
+                    email: {
+                        required: '电子邮箱不能为空',
+                        email: '你输入的格式有误'
+                    }
+                }
+
+            });
+        });
+    </script>
 </body>
 
 </html>

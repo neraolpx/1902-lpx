@@ -1347,6 +1347,7 @@
 .m-listbox .del {
   float: right;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 /*结算*/

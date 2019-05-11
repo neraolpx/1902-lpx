@@ -49,9 +49,10 @@
                 </div>
                 <!-- 手机登录 -->
                 <div class="loginBody-1">
-                    <form action="#">
-                        <input type="text" placeholder="请输入手机号" class="text">
-                        <input type="text" placeholder="请输入验证码" class="text">
+                    <form method="post" onsubmit="return false;">
+                        <p id="error">请输入正确的用户名和密码</p>
+                        <input type="text" placeholder="请输入用户名" class="text">
+                        <input type="password" placeholder="请输入密码" class="text">
                         <div class="lB-l">
                             <input type="checkbox" class="remember">
                             <label for="">自动登录</label>
@@ -65,7 +66,7 @@
                                 免费注册
                             </a>
                         </div>
-                        <input type="button" value="登录" class="button">
+                        <input type="button" value="登录" name="submit" class="button">
                     </form>
                 </div>
                 <!-- 登录底部 -->
@@ -169,6 +170,7 @@
             <em class="change-is-better "></em>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 </body>
 
 </html>
