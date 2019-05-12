@@ -1318,8 +1318,8 @@
   z-index: 960;
   position: fixed;
   left: 36.8px;
-  top: 24px;
-  display: block;
+  top: 200px;
+  display: none;
   width: 66px;
   background: #fff;
 }
@@ -1362,7 +1362,6 @@
 #f-navbox li span {
   height: 12px;
   line-height: 12px;
-  color: #777;
   padding-top: 8px;
   padding-bottom: 1px;
   cursor: pointer;
@@ -1408,6 +1407,10 @@
   width: 17px;
   height: 9px;
   background: url(../img/ui-1.png) no-repeat -216px 0;
+}
+
+#f-navbox .choice {
+  color: red;
 }
 
 /*帮助*/

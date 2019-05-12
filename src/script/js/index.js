@@ -108,4 +108,101 @@
         }
     };
     new banner().init();
+})();
+
+//顶部盒子点击X消失
+;
+(function() {
+    class closeT {
+        constructor() {
+            this.btn = $('.close-top');
+            this.box = $('.top');
+        }
+        init() {
+            let $this = this;
+            this.btn.on('click', function() {
+                $this.box.css({
+                    display: 'none'
+                })
+            })
+        }
+    }
+    new closeT().init();
+})();
+
+//楼梯效果
+
+;
+(function() {
+    class stair {
+        constructor() {
+            this.nav = $('#f-navbox');
+            this.stairs = $('.handler a');
+            this.dot = $('.handler b');
+            this.lc = $('.main-floor');
+            this.gotop = $('.flTop');
+            this.li = $('.handler');
+        }
+        init() {
+            let $this = this;
+            $(window).on('scroll', function() {
+                let $top = $(window).scrollTop();
+                if ($top > 800) {
+                    $this.nav.show();
+                } else {
+                    $this.nav.hide();
+                };
+
+                //滚动条改变对应的楼层改变样式
+                $this.lc.each(function(index, element) {
+                    let $lctop = $(element).offset().top;
+                    if ($lctop > $top) {
+                        $this.stairs.removeClass('choice');
+                        $this.dot.css({
+                            display: 'none'
+                        })
+                        $this.stairs.eq(index).addClass('choice');
+                        $this.dot.eq(index).css({
+                            display: 'block'
+                        })
+                        return false;
+                    }
+                })
+            });
+
+            //导航栏加点击事件
+            this.navclick();
+            //回到顶部
+            this.got();
+        }
+
+        navclick() {
+                //导航添加点击事件
+                let $this = this;
+                this.li.on('click', function() {
+                    let $index = $(this).index();
+                    $this.stairs.removeClass('choice');
+                    $this.dot.css({
+                        display: 'none'
+                    });
+                    $this.stairs.eq($index).addClass('choice');
+                    $this.dot.eq($index).css({
+                        display: 'block'
+                    });
+                    let $top = $this.lc.eq($index).offset().top;
+                    $('html,body').stop().animate({
+                        scrollTop: $top
+                    })
+                })
+            }
+            //回到顶部
+        got() {
+            this.gotop.on('click', function() {
+                $('html,body').animate({
+                    scrollTop: 0
+                })
+            })
+        }
+    };
+    new stair().init();
 })()
