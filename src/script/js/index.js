@@ -16,7 +16,7 @@
                         $datastr += `
                         <li>
                         <a href="details.html?sid=${value.sid}" target="_blank">
-                        <img src="${value.url}">
+                        <img data-original="${value.url}" class="lazy" width="130" height="130">
                         <p>${value.title}</p>
                         <span>￥${value.price}</span>
                         </a>
@@ -24,6 +24,14 @@
                         `;
                     })
                     $this.ul.html($datastr);
+
+                    // 懒加载淡入
+                    (function() {
+                        $("img.lazy").lazyload({
+                            effect: "fadeIn"
+                        });
+
+                    })();
                 }
             })
         }
@@ -155,7 +163,7 @@
 
                 //滚动条改变对应的楼层改变样式
                 $this.lc.each(function(index, element) {
-                    let $lctop = $(element).offset().top;
+                    let $lctop = $(element).offset().top + 200;
                     if ($lctop > $top) {
                         $this.stairs.removeClass('choice');
                         $this.dot.css({
@@ -181,14 +189,14 @@
                 let $this = this;
                 this.li.on('click', function() {
                     let $index = $(this).index();
-                    $this.stairs.removeClass('choice');
-                    $this.dot.css({
-                        display: 'none'
-                    });
-                    $this.stairs.eq($index).addClass('choice');
-                    $this.dot.eq($index).css({
-                        display: 'block'
-                    });
+                    // $this.stairs.removeClass('choice');
+                    // $this.dot.css({
+                    //     display: 'none'
+                    // });
+                    // $this.stairs.eq($index).addClass('choice');
+                    // $this.dot.eq($index).css({
+                    //     display: 'block'
+                    // });
                     let $top = $this.lc.eq($index).offset().top;
                     $('html,body').stop().animate({
                         scrollTop: $top
@@ -205,4 +213,4 @@
         }
     };
     new stair().init();
-})()
+})();

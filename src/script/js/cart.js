@@ -1,6 +1,6 @@
 //渲染
 (function() {
-    class cart {
+    class cartt {
         constructor() {
             this.goodsbox = $('.mgoods');
             this.goodslist = $('#goodslist');
@@ -244,5 +244,5 @@
             });
         }
     }
-    new cart().init();
+    new cartt().init();
 })();
